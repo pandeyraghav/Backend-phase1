@@ -1,6 +1,6 @@
 const { log } = require('console');
 const fs = require('fs');
-const filePath = "./tasks.json";
+const filePath = "./tasks.json"
 
 const loadTasks = () => {
     try {
