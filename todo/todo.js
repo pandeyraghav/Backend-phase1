@@ -20,8 +20,15 @@ const saveTasks = (tasks) => {
 
 const addTask = (task) => {
     const tasks = loadTasks()
-    tasks.push(task)
+    tasks.push({task})
     saveTasks(tasks)
+}
+
+const listTask = () => {
+    const tasks = loadTasks()
+    tasks.forEach((task, index) => {
+        console.log(`${index + 1}. ${task.task}`);
+    });
 }
 
 const command = process.argv[2];
